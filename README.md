@@ -1,5 +1,3 @@
-
-
 # Dog Breed Identification
 
 ## About
@@ -52,10 +50,12 @@ http://127.0.0.1:5000/
 
 ## Screenshots
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0b561833-ceb1-4689-8f08-a63d0d773113" width="600">
-  <img src="https://github.com/user-attachments/assets/8c8ef2e5-db09-4a74-993b-6c94742154da" width="600">
-  <img src="https://github.com/user-attachments/assets/587dab34-bcb3-47df-aae0-eb4a11ca1eda" width="600">
-  <img src="https://github.com/user-attachments/assets/19c7ad46-71cf-43f9-88de-34405d185c2e" width="600">
+  <img src="https://github.com/user-attachments/assets/0b561833-ceb1-4689-8f08-a63d0d773113" width="48%" height="600">
+  <img src="https://github.com/user-attachments/assets/8c8ef2e5-db09-4a74-993b-6c94742154da" width="48%" height="600">
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/587dab34-bcb3-47df-aae0-eb4a11ca1eda" width="48%" height="600">
+  <img src="https://github.com/user-attachments/assets/19c7ad46-71cf-43f9-88de-34405d185c2e" width="48%" height="600">
 </p>
 
 ## Notes
@@ -64,4 +64,3 @@ http://127.0.0.1:5000/
 - If you encounter issues, ensure all dependencies are installed correctly.
 
 Happy coding! 🚀
-
