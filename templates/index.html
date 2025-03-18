@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        function previewImage(event) {
+            const imagePreview = document.getElementById('imagePreview');
+            const predictionResult = document.getElementById('predictionResult');
+
+            // Clear previous prediction when a new file is selected
+            predictionResult.innerHTML = ''; 
+            imagePreview.src = '';
+
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block'; // Show the image preview
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.style.display = 'none'; // Hide the preview if no file is selected
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Dog Breed Prediction</h1>
+    </div>
+
+    <div class="container">
+        <!-- Upload Form -->
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <!-- Styled File Input -->
+            <label for="fileInput" class="custom-file-upload">
+                Choose File
+            </label>
+            <input id="fileInput" type="file" name="file" accept="image/*" onchange="previewImage(event)" hidden required>
+            <img id="imagePreview" style="display: none;" alt="Image Preview">
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="predictionResult">
+            {% if uploaded_file %}
+            <div class="result">
+                <h2>Prediction Result</h2>
+                <img src="{{ url_for('static', filename='uploads/' + uploaded_file) }}" alt="Uploaded Image">
+                <p><strong>Breed:</strong> {{ predicted_breed }}</p>
+                <p><strong>Confidence:</strong> {{ confidence_score }}</p>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

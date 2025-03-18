@@ -1,0 +1,127 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Soft grayish-blue gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black; /* Ensures all text is black */
+}
+
+/* Sticky Header */
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background: linear-gradient(45deg, #6c63ff, #4facfe); /* Subtle purple-to-blue gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Container Styling */
+.container {
+    background: white; /* White for contrast */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Custom File Input Styling */
+.custom-file-upload {
+    display: inline-block;
+    background: #6c63ff; /* Purple */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background: #4facfe; /* Soft blue on hover */
+}
+
+/* Responsive Image Preview */
+#imagePreview {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures images fit into the area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add Spacing Between Image and Button */
+button {
+    margin-top: 20px;
+    background-color: #6c63ff; /* Purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #4facfe; /* Blue on hover */
+}
+
+/* Result Section with Enhanced Styling */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #c6e5fb; /* Light pastel blue */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result h2 {
+    margin: 0;
+    color: #0b0b0f; /* Purple for headings */
+    font-size: 1.5rem;
+}
+
+/* Footer Styling (Optional) */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555; /* Subtle gray for footer text */
+    text-align: center;
+}
